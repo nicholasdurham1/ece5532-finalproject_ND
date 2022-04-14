@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<launch>
+  <!-- Run Premade Code for enviroment-->
+  <include file="$(find audibot_path_following)/launch/two_audibot_path_following.launch" />
+  
+  <!-- create a1 and a2 nodes for control
+  <node ns="a1" pkg="audibot_twist_controller" type="audibot_twist_node" name="audibot_twist_node" />
+  <node ns="a2" pkg="audibot_twist_controller" type="audibot_twist_node" name="audibot_twist_node" />-->
+
+  <!-- create Driver Node nodes for control-->
+  <node pkg="final_project" type="DriveFP" name="DriveFP" output="screen"  /> 
+  <node pkg="final_project" type="GpsCodeFP" name="GpsCodeFP"  /> 
+</launch>
